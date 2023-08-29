@@ -17,7 +17,7 @@
 
 </c:import>
 <div>
-    User Home Page
+    <a href="${pageContext.request.contextPath}/DBConnection"></a>
 </div>
 <c:import url="include/footer.jsp">
 

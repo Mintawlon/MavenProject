@@ -1,11 +1,13 @@
 package Controller;
 
+import Model.DBConnection;
+import entity.User;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-
 import jakarta.servlet.annotation.*;
-
 import java.io.IOException;
+import java.util.ArrayList;
+
 
 @WebServlet(name = "Testing", value = "/Testing")
 public class Testing extends HttpServlet {
@@ -15,10 +17,13 @@ public class Testing extends HttpServlet {
 
         switch(page){
 
+
             case "home":
                     request.getRequestDispatcher("home.jsp").forward(request,response);
                 break;
             case "userData":
+                ArrayList<User> lister= new DBConnection().UserData();
+                       request.setAttribute("userdata", lister);
                   request.getRequestDispatcher("dataList.jsp").forward(request,response);
                 break;
 

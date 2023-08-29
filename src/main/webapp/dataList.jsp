@@ -17,7 +17,7 @@
 
 </c:import>
 <div>
-    Edit User Page
+
 </div>
 <c:import url="include/footer.jsp">
 

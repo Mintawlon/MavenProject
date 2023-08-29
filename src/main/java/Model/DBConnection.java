@@ -1,18 +1,17 @@
 package Model;
 
+import entity.User;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class DBConnection {
 
-    public ArrayList<String> UserData (){
-        ArrayList<String> arrayList = new ArrayList<String>();
+    public ArrayList<User> UserData (){
+        ArrayList<User> arrayList = new ArrayList<User>();
         try (Connection connection = getConnection()) {
             // A query to get current date time from Oracle database
             String sql = "select * from userdata";
@@ -20,9 +19,8 @@ public class DBConnection {
             ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {
-                arrayList.add(rs.getString("username"));
-                arrayList.add(rs.getString("email"));
-                arrayList.add(rs.getString("password"));
+                arrayList.add(new User(rs.getInt("user_id"),rs.getString("username"),rs.getString("email"),rs.getString("password")));
+
             }
 
 

@@ -3,8 +3,14 @@ package entity;
 public class User {
 
     private int user_id;
+    private String username;
+    private String email;
+    private String password;
 
-    public User(int user_id, String username, String email, String password) {
+    public User() {
+    }
+
+    public User(int user_id, String username, String email, String password ) {
         this.user_id = user_id;
         this.username = username;
         this.email = email;
@@ -43,11 +49,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    private String username;
-    private String email;
-    private String password;
-
-
 
 }
