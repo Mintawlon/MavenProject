@@ -17,20 +17,24 @@ public class Testing extends HttpServlet {
 
         switch(page){
 
-
             case "home":
                     request.getRequestDispatcher("home.jsp").forward(request,response);
                 break;
             case "userData":
-                ArrayList<User> lister= new DBConnection().UserData();
-                       request.setAttribute("userdata", lister);
-                  request.getRequestDispatcher("dataList.jsp").forward(request,response);
+                    UserList(request,response);
                 break;
-
+            case "add":
+                request.getRequestDispatcher("addUser.jsp").forward(request,response);
+                break;
             default:
 
         }
 
+    }
+    public void UserList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        ArrayList<User> lister= new DBConnection().UserData();
+        request.setAttribute("userdata", lister);
+        request.getRequestDispatcher("dataList.jsp").forward(request,response);
     }
 
 }

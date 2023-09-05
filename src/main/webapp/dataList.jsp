@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: Dell
   Date: 8/26/2023
@@ -17,7 +18,24 @@
 
 </c:import>
 <div>
-
+    <table>
+        <thead>
+        <td>User_id</td>
+        <td>Username</td>
+        <td>Email</td>
+        <td>Password</td>
+        </thead>
+        <tbody>
+           <%
+              ArrayList<User> dataList = (ArrayList<User>) request.getAttribute("userdata");
+              for( int i =0; i< dataList.size(); i++){
+                  out.print("<td>"+dataList.get(i).getUser_id()+"</td>");
+                  out.print("<td>"+dataList.get(i).getUsername()+"</td>");
+                  out.print("<td>"+dataList.get(i).getEmail()+"</td>");
+              }
+           %>
+        </tbody>
+    </table>
 </div>
 <c:import url="include/footer.jsp">
 

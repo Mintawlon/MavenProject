@@ -2,16 +2,20 @@ package entity;
 
 public class User {
 
-    private int user_id;
+    private int id;
     private String username;
     private String email;
     private String password;
 
-    public User() {
+    public User(int id, String username, String email, String password ) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
 
-    public User(int user_id, String username, String email, String password ) {
-        this.user_id = user_id;
+    // Create Data Record into database
+    public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -19,11 +23,12 @@ public class User {
 
     public int getUser_id() {
 
-        return user_id;
+        return id;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUser_id(int id) {
+
+        this.id= id;
     }
 
     public String getUsername() {
