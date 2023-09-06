@@ -17,13 +17,27 @@ public class UserController extends HttpServlet {
             case "add":
                   User newuser=new User(request.getParameter("username"), request.getParameter("email"),request.getParameter("password"));
                   newUser(newuser);
+                 request.getRequestDispatcher("dataList.jsp").forward(request,response);
                 break;
             case "update":
+
                 break;
         }
     }
 
     public void newUser(User newuser) {
        new DBConnection().addUser(newuser);
+
     }
+    // for update user data
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String getData = request.getParameter("getData");
+        switch(getData){
+            case "update":
+
+                break;
+        }
+    }
+
 }

@@ -19,23 +19,26 @@
 </c:import>
 <div>
     <table>
-        <thead>
-        <td>User_id</td>
-        <td>Username</td>
-        <td>Email</td>
-        <td>Password</td>
-        </thead>
-        <tbody>
-           <%
-              ArrayList<User> dataList = (ArrayList<User>) request.getAttribute("userdata");
-              for( int i =0; i< dataList.size(); i++){
-                  out.print("<td>"+dataList.get(i).getUser_id()+"</td>");
-                  out.print("<td>"+dataList.get(i).getUsername()+"</td>");
-                  out.print("<td>"+dataList.get(i).getEmail()+"</td>");
-              }
-           %>
-        </tbody>
+        <tr>
+            <th>User_id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        <%
+            ArrayList<User> dataList = (ArrayList<User>) request.getAttribute("userdata");
+            for( int i =0; i< dataList.size(); i++){
+                out.print("<tr>");
+                out.print("<td>"+dataList.get(i).getUser_id()+"</td>");
+                out.print("<td>"+dataList.get(i).getUsername()+"</td>");
+                out.print("<td>"+dataList.get(i).getEmail()+"</td>");
+                String URL =request.getContextPath()+"/UserController?getData=update&userId="+dataList.get(i).getUser_id();
+                out.print("<td><a href="+URL+">Update</a></td>");
+                out.print("</tr>");
+            }
+        %>
     </table>
+
 </div>
 <c:import url="include/footer.jsp">
 

@@ -65,8 +65,7 @@ public class DBConnection {
             statement.setString(1, username);
             statement.setString(2, email);
             statement.setString(3, password);
-            return statement.execute();
-
+            return statement.execute(query);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

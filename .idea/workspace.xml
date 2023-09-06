@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8470c69-6acc-455f-9e0b-092a5ae6b17e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/dataList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dataList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/include/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +192,8 @@
       <workItem from="1693813648036" duration="6587000" />
       <workItem from="1693879903544" duration="1428000" />
       <workItem from="1693897852483" duration="492000" />
-      <workItem from="1693898610030" duration="8796000" />
+      <workItem from="1693898610030" duration="10361000" />
+      <workItem from="1693984200703" duration="4374000" />
     </task>
     <servers />
   </component>
@@ -236,33 +232,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
           <line>56</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
-          <line>62</line>
+          <line>67</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Model/DBConnection.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
